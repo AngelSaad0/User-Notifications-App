@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Remainder_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jv6-5d-qcx">
+                                <rect key="frame" x="20" y="79" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="body " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xbh-Pj-SU7">
+                                <rect key="frame" x="20" y="133" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="lub-F0-yYE">
+                                <rect key="frame" x="20" y="187" width="353" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="M3v-Dm-ApL"/>
+                                </constraints>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIk-R4-lat">
+                                <rect key="frame" x="150" y="477" width="93" height="30"/>
+                                <color key="tintColor" red="0.85427417809999995" green="0.15686275059999999" blue="0.15686275059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Set Reminder"/>
+                                <connections>
+                                    <action selector="setRremainder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6UZ-j0-McY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLu-L6-col">
+                                <rect key="frame" x="111.66666666666669" y="557" width="170" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Set Reminder after 2 sec"/>
+                                <connections>
+                                    <action selector="setReminderAfter2Sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oRy-jt-hyP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCK-nj-nU6">
+                                <rect key="frame" x="126.66666666666669" y="637" width="140" height="30"/>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="on location for once "/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lub-F0-yYE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="7Eb-JQ-nbr"/>
+                            <constraint firstItem="jv6-5d-qcx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="94V-Uv-ket"/>
+                            <constraint firstItem="lub-F0-yYE" firstAttribute="top" secondItem="Xbh-Pj-SU7" secondAttribute="bottom" constant="20" id="Cef-sA-e0p"/>
+                            <constraint firstItem="eLu-L6-col" firstAttribute="top" secondItem="wIk-R4-lat" secondAttribute="bottom" constant="50" id="K5d-9w-Ik2"/>
+                            <constraint firstItem="eLu-L6-col" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q2A-PC-RqD"/>
+                            <constraint firstItem="wIk-R4-lat" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QZF-6d-330"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xbh-Pj-SU7" secondAttribute="trailing" constant="20" id="Qzr-Ts-46T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jv6-5d-qcx" secondAttribute="trailing" constant="20" id="Ra8-iI-iiv"/>
+                            <constraint firstItem="TCK-nj-nU6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TeZ-yj-Ud1"/>
+                            <constraint firstItem="Xbh-Pj-SU7" firstAttribute="top" secondItem="jv6-5d-qcx" secondAttribute="bottom" constant="20" id="UE3-Us-ZqX"/>
+                            <constraint firstItem="TCK-nj-nU6" firstAttribute="top" secondItem="eLu-L6-col" secondAttribute="bottom" constant="50" id="Zs6-9U-LFM"/>
+                            <constraint firstItem="jv6-5d-qcx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="brS-nc-Nx2"/>
+                            <constraint firstAttribute="trailing" secondItem="lub-F0-yYE" secondAttribute="trailing" constant="20" id="irB-vq-HK7"/>
+                            <constraint firstItem="Xbh-Pj-SU7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oGI-gz-mg5"/>
+                            <constraint firstItem="wIk-R4-lat" firstAttribute="top" secondItem="lub-F0-yYE" secondAttribute="bottom" constant="60" id="yfo-pt-On5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bodyTextField" destination="Xbh-Pj-SU7" id="Fvq-k2-eUs"/>
+                        <outlet property="dataField" destination="lub-F0-yYE" id="ydj-Mm-PE7"/>
+                        <outlet property="titleTextField" destination="jv6-5d-qcx" id="VjJ-ZV-QLC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
